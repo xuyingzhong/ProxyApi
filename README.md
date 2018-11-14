@@ -40,3 +40,12 @@ adsl.py
 #也可以写到/etc/rc.d/rc.local，记得把/etc/rc.d/rc.local设置可执行权限，不然不起作用。
 
 nohup python adsl.py
+
+7、查询方式，API的接口：
+因为公司有几种语言，使用的代理格式不一样，所以这里只返回一个ip地址，代理的端口、用户名、密码是固定的，采集程序自己写。
+
+http://ip:port/getip    所有随机
+
+http://ip:port/getip?ip=云主机名称  按管理ip查询
+
+http://ip:port/getip?addr=重庆移动,重庆电信&tof=f    按地区随机，addr可以是单值，也可以使多值，多值用小写的,分割，tof （true or false），不写默认为t，传值f表示非
