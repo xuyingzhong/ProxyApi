@@ -8,12 +8,16 @@
 我们使用的云立方的云vps，每季度打折后200元不到。推荐系统用centos，它自动将adsl的账号密码弄好。
 
 yum -y install squid
+
 yum install -y httpd-tools
+
 yum install -y openssl
 
 2、设置代理的账号和密码:
 touch /etc/squid/squid_passwd
+
 chown squid /etc/squid/squid_passwd
+
 htpasswd /etc/squid/squid_passwd proxy #会提示输入两次密码
 
 3、写入配置文件：
