@@ -18,9 +18,13 @@ htpasswd /etc/squid/squid_passwd proxy #会提示输入两次密码
 
 3、写入配置文件：
 cat > /etc/squid/squid.conf <<EOF 
+
 #http_access allow all
+
 http_port 65500
+
 auth_param basic program /usr/lib64/squid/basic_ncsa_auth /etc/squid/squid_passwd
+
 auth_param basic children 50
 auth_param basic realm Squid proxy-caching web server
 auth_param basic credentialsttl 2 hours
