@@ -56,3 +56,9 @@ http://ip:port/getip    所有随机
 http://ip:port/getip?ip=云主机名称  按云主机名称查询
 
 http://ip:port/getip?addr=重庆移动,重庆电信&tof=f    按地区随机，addr可以是单值，也可以使多值，多值用小写的,分割，tof （true or false），不写默认为t，传值f表示非
+
+8、管理：
+http://ip:port/checkip，状态查询，可以只看故障的主机
+
+http://ip:port/shell，程序会自动把云主机的名字写到主机管理里面，但是管理ip、账号、密码需要手动添加，配置后才能网页执行命令。
+
